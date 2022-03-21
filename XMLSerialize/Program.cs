@@ -40,7 +40,7 @@ namespace XML
         }
         public override string ToString()
         {
-            return $"Name: {name}\nPrice:{price}$\nDiscont:{discount}%\n\n";
+            return $"Name: {name}\nPrice: {price}$\nDiscont: {discount}%\n\n";
         }
     }
 
@@ -73,11 +73,15 @@ namespace XML
         static void Main(string[] args)
         {
 
-            Product[] product = new Product[3];
-
+            Product[] product = new Product[5];
+           
+            
             product[0] = new Product("Acer", 290d, 5);
             product[1] = new Product("DELL", 590d, 5);
-            product[2] = new Product("MSI", 890d, 5);
+            product[2] = new Product("ASUS", 690d, 5);
+            product[3] = new Product("LG", 790d, 5);
+            product[4] = new Product("MSI", 890d, 5);
+           
 
             Serialize(product);
             Deserialization(product);
